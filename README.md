@@ -12,3 +12,8 @@ xhost + localhost
 brew install pulseaudio
 pulseaudio --load=module-native-protocol-tcp --exit-idle-time=-1 --daemon
 ```
+
+## Run the program
+```
+docker compose up
+```
