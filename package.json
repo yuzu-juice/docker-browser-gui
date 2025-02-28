@@ -1,0 +1,12 @@
+{
+    "name": "docker-browser-gui",
+    "version": "1.0.0",
+    "description": "Docker container with browser GUI",
+    "main": "browser.js",
+    "dependencies": {
+        "playwright": "^1.50.1"
+    },
+    "scripts": {
+        "start": "node browser.js"
+    }
+}

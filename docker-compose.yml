@@ -1,0 +1,11 @@
+services:
+    docker-browser-gui:
+        build: .
+        environment:
+            - DISPLAY=host.docker.internal:0 # Mac用のX11 DISPLAY設定
+            - PULSE_SERVER=docker.for.mac.localhost
+        volumes:
+            - ~/.config/pulse:/root/.config/pulse # PulseAudio設定ファイルをマウント
+            - /tmp/.X11-unix:/tmp/.X11-unix # X11ソケットをマウント
+        extra_hosts:
+            - "host.docker.internal:host-gateway" # Docker内からホストへの接続用
